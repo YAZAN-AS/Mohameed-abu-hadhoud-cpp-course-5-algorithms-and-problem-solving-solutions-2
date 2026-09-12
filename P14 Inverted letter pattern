@@ -1,0 +1,31 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int ReadPositiveNumber(string message)
+{
+	int N;
+	cout << message << endl;
+	cin >> N;
+	return N;
+}
+
+void PrintInvertLetterPattern(int N)
+{
+	cout << endl;
+	for (int i = 65 + N - 1; i >= 65; i--)
+	{
+		for (int j = 1; j <= N - (65 + N - 1 - i); j++)
+		{
+			cout << char(i);
+		}
+		cout << endl;
+	}
+}
+
+int main()
+{
+	PrintInvertLetterPattern(ReadPositiveNumber("Please enter a positive number:"));
+	system("pause>0");
+	return 0;
+}
