@@ -1,0 +1,28 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+float ReadNum()
+{
+	float N;
+	cout << "Please enter a number: ";
+	cin >> N;
+	return N;
+}
+
+float MyABS(float N)
+{
+	if (N > 0)
+		return N;
+	else
+		return N * -1;
+}
+
+int main()
+{
+	float N = ReadNum();
+	cout << "My ABS result : " << MyABS(N) << endl;
+	cout << "C++ ABS result : " << abs(N) << endl;
+	system("pause>0");
+	return 0;
+}
